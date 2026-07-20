@@ -115,6 +115,8 @@
 
   <footer class="wrap"><div><div class="footer-title">NARCO <i>/</i> VISUAL INTEL</div><div>INTERNAL GAME ART LEARNING HUB</div></div><div class="footer-note">面向北美 30—45 岁男性的角色设计情报 · 本站只做视觉研究与虚构角色设计参考 · 所有影视图片版权归各权利方所有 · CHECKED 2026-07-20</div></footer>
   <script>
+    // The site is a visual reference wall: preload every cover so the deck never opens as empty tiles.
+    document.querySelectorAll('img[loading="lazy"]').forEach(img=>{img.loading='eager'});
     const buttons=[...document.querySelectorAll('[data-filter]')];
     const cards=[...document.querySelectorAll('.card')];
     const count=document.getElementById('count');
